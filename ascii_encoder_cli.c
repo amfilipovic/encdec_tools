@@ -2,9 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef _WIN32
+#define CLEAR_CMD "cls"
+#else
+#define CLEAR_CMD "clear"
+#endif
+
 int main() {
     // Clear the screen.
-    system("cls");
+    system(CLEAR_CMD);
 
     // Ask the user to input text to encode.
     char text[100];
