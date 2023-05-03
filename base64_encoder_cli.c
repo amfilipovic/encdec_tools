@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef _WIN32
+#define CLEAR_CMD "cls"
+#else
+#define CLEAR_CMD "clear"
+#endif
+
 // Define the Base64 encoding table.
 static const char base64_table[65] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
@@ -23,7 +29,7 @@ void base64_encode(const unsigned char *src, size_t srclen, char *dst, size_t *d
 
 int main() {
     // Clear the screen.
-    system("cls");
+    system(CLEAR_CMD);
     // Ask the user to input text to encode.
     char text[100];
     printf("Input text to encode: ");
