@@ -51,10 +51,10 @@ int main() {
         ascii_bin_enc_text[i*9 + 8] = ' ';
     }
     ascii_bin_enc_text[strlen(text)*9-1] = '\0';
-// Print the ASCII decimal, hexadecimal, octal and binary encoded text.
-printf("ASCII decimal encoded text: %s\n", ascii_dec_enc_text);
-printf("ASCII hexadecimal encoded text: %s\n", ascii_hex_enc_text);
-printf("ASCII octal encoded text: %s\n", ascii_oct_enc_text);
-printf("ASCII binary encoded text: %s\n", ascii_bin_enc_text);
-return 0;
+    // Print the ASCII decimal, hexadecimal, octal and binary encoded text.
+    printf("ASCII decimal encoded text: %s\n", ascii_dec_enc_text);
+    printf("ASCII hexadecimal encoded text: %s\n", ascii_hex_enc_text);
+    printf("ASCII octal encoded text: %s\n", ascii_oct_enc_text);
+    printf("ASCII binary encoded text: %s\n", ascii_bin_enc_text);
+    return 0;
 }

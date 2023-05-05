@@ -34,6 +34,7 @@ int main() {
     char text[100];
     printf("Input text to encode: ");
     fgets(text, 100, stdin);
+    // Remove the trailing newline character.
     text[strcspn(text, "\n")] = 0;
     // Encode the inputted text using Base64 encoding.
     size_t dstlen;
